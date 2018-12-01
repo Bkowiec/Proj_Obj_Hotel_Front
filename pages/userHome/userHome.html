@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOTEL - userHome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap-datepicker.standalone.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/animate.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="userHome.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HOTEL</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="logOut"><a>Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron filter">
+            <h3>Advanced filter</h3>
+            <br>
+            <label for="datepicker">Date</label>
+            <div class="input-daterange input-group" id="datepicker">
+                <input type="text" class="input-sm form-control" name="start" />
+                <span class="input-group-addon">to</span>
+                <input type="text" class="input-sm form-control" name="end" />
+            </div>
+            <button id="checkDate" class="btn btn-md btn-primary btn-block" style="margin-top: 30px">Check date</button>
+            <br>
+            <label for="range_03">Price</label>
+            <input id="range_03" style="display: none" tabindex="-1" readonly="">
+            <br>
+
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="typeAdult">Adult</label>
+                                <select required="" class="form-control" id="typeAdult">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="typeChild">Children</label>
+                                <select required="" class="form-control" id="typeChild">
+                                    <option>0</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                    <option>4</option>
+                                    <option>5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                            <label for="typeAdult">Group</label>
+                            <input type="number" class="input-sm form-control" name="start" />
+                        </div>
+                    
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="typeSelect">Guest rating</label>
+                                <select required="" class="form-control" id="typeRating">
+                                    <option>8.5+ Excellent</option>
+                                    <option>8.0+ Very good</option>
+                                    <option>7.5+ Good</option>
+                                    <option>7.0+ Fair</option>
+                                    <option>0.0+ Okay</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="typeSelect">Room type</label>
+                                <select required="" class="form-control" id="typeRoom">
+                                    <option>Single</option>
+                                    <option>Twin</option>
+                                    <option>Double</option>
+                                    <option>Triple</option>
+                                    <option>Quad</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="form-group">
+                        <label for="sel3">More filters</label>
+                        <div id="checkboxes">
+                            <label>
+                                <input type="checkbox" style="margin-right:6px" id="wifi" value="freeWifi">
+                                Free WiFi
+                            </label>
+                            <label>
+                                <input type="checkbox" style="margin-right:6px" id="conditioning" value="airConditioning">
+                                Air conditioning
+                            </label>
+                            <label>
+                                <input type="checkbox" style="margin-right:6px" id="petFriendly" value="petFriendly">
+                                Pet friendly
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="search" class="btn btn-md btn-primary btn-block">Search</button>
+
+
+        </div>
+
+        <div class="jumbotron rooms">
+            <h1>Our rooms</h1>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="thumbnail row">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="../../dist/img/240x240.png" alt="240x240.png">
+                            </div>
+                            <div class="media-body">
+                                <div class="media-wrapper">
+                                    <div>
+                                        <div style="display:flex;justify-content:space-between">
+                                            <h4 class="media-heading">503</h4>
+                                            <span class="badge green">8.5+</span>
+                                        </div>
+
+                                        <h5>Single</h5>
+                                    </div>
+                                    <!-- <div> -->
+                                    <h4 class="pricePlan">300 USD</h4>
+                                    <h6>WiFi, Air conditioning, Pet friendly</h6>
+                                    <!-- </div> -->
+                                    <button id="book" class="btn btn-md btn-primary btn-block">Booking!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="thumbnail row">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="../../dist/img/240x240.png" alt="240x240.png">
+                            </div>
+                            <div class="media-body">
+                                <div class="media-wrapper">
+                                    <div>
+                                        <div style="display:flex;justify-content:space-between">
+                                            <h4 class="media-heading">503</h4>
+                                            <span class="badge green">8.5+</span>
+                                        </div>
+
+                                        <h5>Single</h5>
+                                    </div>
+                                    <!-- <div> -->
+                                    <h4 class="pricePlan">300 USD</h4>
+                                    <h6>WiFi, Air conditioning, Pet friendly</h6>
+                                    <!-- </div> -->
+                                    <button id="book" class="btn btn-md btn-primary btn-block">Booking!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="thumbnail row">
+                        <div class="media">
+                            <div class="media-left">
+                                <img src="../../dist/img/240x240.png" alt="240x240.png">
+                            </div>
+                            <div class="media-body">
+                                <div class="media-wrapper">
+                                    <div>
+                                        <div style="display:flex;justify-content:space-between">
+                                            <h4 class="media-heading">503</h4>
+                                            <span class="badge green">8.5+</span>
+                                        </div>
+
+                                        <h5>Single</h5>
+                                    </div>
+                                    <!-- <div> -->
+                                    <h4 class="pricePlan">300 USD</h4>
+                                    <h6>WiFi, Air conditioning, Pet friendly</h6>
+                                    <!-- </div> -->
+                                    <button id="book" class="btn btn-md btn-primary btn-block">Booking!</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../dist/js/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../dist/js/ion.rangeSlider.min.js"></script>
+    <script src="../../dist/js/bootstrap-notify.js"></script>
+    <script src="../../dist/js/custom.js"></script>
+    <script src="userHome.js"></script>
+</body>
+
+</html>

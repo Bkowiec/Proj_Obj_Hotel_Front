@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>HOTEL - adminHome</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap-datepicker.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap-datepicker.standalone.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/bootstrap-datepicker3.min.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/ion.rangeSlider.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/ion.rangeSlider.skinFlat.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../../dist/css/animate.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="adminHome.css" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">HOTEL</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="logOut"><a>Log out</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="jumbotron filter">
+            <h3>Add room</h3>
+            <br>
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeAdult">Room number</label>
+                            <input type="text" id="inputNumber" class="form-control" placeholder="Number" required="" autofocus="">
+                        </div>
+
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeChild">Room price</label>
+                            <input type="text" id="inputPrice" class="form-control" placeholder="Price" required="" autofocus="">
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeRoom">Room type</label>
+                            <select required="" class="form-control" id="typeRoom">
+                                    <option>Single</option>
+                                    <option>Twin</option>
+                                    <option>Double</option>
+                                    <option>Triple</option>
+                                    <option>Quad</option>
+                                </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                        <div class="form-group">
+                            <label for="sel3">More</label>
+                            <div id="checkboxes">
+                                <label>
+                                    <input type="checkbox" style="margin-right:6px" id="wifi" value="freeWifi">
+                                    Free WiFi
+                                </label>
+                                <label>
+                                    <input type="checkbox" style="margin-right:6px" id="conditioning" value="airConditioning">
+                                    Air conditioning
+                                </label>
+                                <label>
+                                    <input type="checkbox" style="margin-right:6px" id="petFriendly" value="petFriendly">
+                                    Pet friendly
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button id="addRoom" class="btn btn-md btn-primary btn-block">Add</button>
+        </div>
+
+        <div class="jumbotron filter">
+            <h3>Rooms</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Type</th>
+                            <th>Price</th>
+                            <th>Rating</th>
+                            <th>WiFi</th>
+                            <th>Air Conditioning</th>
+                            <th>Pet friendly</th>
+                            <th>Reserved</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="jumbotron filter">
+            <h3>Visitors</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-striped visitors">
+                    <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Email</th>
+                            <th>Reserved room</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="jumbotron filter">
+            <h3>Employees</h3>
+            <br>
+            <div class="table-responsive">
+                <table class="table table-striped employees">
+                    <thead>
+                        <tr>
+                            <th>First name</th>
+                            <th>Last name</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../../dist/js/jquery.min.js"></script>
+    <script src="../../dist/js/bootstrap.min.js"></script>
+    <script src="../../dist/js/bootstrap-datepicker.min.js"></script>
+    <script src="../../dist/js/ion.rangeSlider.min.js"></script>
+    <script src="../../dist/js/bootstrap-notify.js"></script>
+    <script src="../../dist/js/custom.js"></script>
+    <script src="adminHome.js"></script>
+</body>
+
+</html>
