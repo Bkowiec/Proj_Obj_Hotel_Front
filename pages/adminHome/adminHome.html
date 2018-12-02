@@ -48,26 +48,29 @@
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <div class="form-group">
                             <label for="typeAdult">Room number</label>
-                            <input type="text" id="inputNumber" class="form-control" placeholder="Number" required="" autofocus="">
+                            <input type="text" id="inputNumber" class="form-control" placeholder="Number" required=""
+                                autofocus="">
                         </div>
 
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <div class="form-group">
                             <label for="typeChild">Room price</label>
-                            <input type="text" id="inputPrice" class="form-control" placeholder="Price" required="" autofocus="">
+                            <input type="text" id="inputPrice" class="form-control" placeholder="Price" required=""
+                                autofocus="">
                         </div>
                     </div>
                     <div class="col-sm-12 col-md-4 col-lg-4">
                         <div class="form-group">
                             <label for="typeRoom">Room type</label>
                             <select required="" class="form-control" id="typeRoom">
-                                    <option>Single</option>
-                                    <option>Twin</option>
-                                    <option>Double</option>
-                                    <option>Triple</option>
-                                    <option>Quad</option>
-                                </select>
+                                <!-- <option value="0">All</option> -->
+                                <option value="1">Single</option>
+                                <option value="2">Twin</option>
+                                <option value="2.5">Double</option>
+                                <option value="3">Triple</option>
+                                <option value="4">Quad</option>
+                            </select>
                         </div>
                     </div>
                 </div>
@@ -100,7 +103,7 @@
             <h3>Rooms</h3>
             <br>
             <div class="table-responsive">
-                <table class="table table-striped">
+                <table class="table table-striped rooms">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -115,7 +118,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                       
+
                     </tbody>
                 </table>
             </div>
@@ -128,10 +131,12 @@
                 <table class="table table-striped visitors">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>First name</th>
                             <th>Last name</th>
                             <th>Email</th>
                             <th>Reserved room</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -148,9 +153,11 @@
                 <table class="table table-striped employees">
                     <thead>
                         <tr>
+                            <th>ID</th>
                             <th>First name</th>
                             <th>Last name</th>
                             <th>Email</th>
+                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -158,6 +165,71 @@
                     </tbody>
                 </table>
             </div>
+        </div>
+
+        <div class="jumbotron filter">
+            <h3>Add reservation</h3>
+            <br>
+            <div class="table-responsive">
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeAdult">First name</label>
+                            <input type="text" class="input-sm form-control fn" name="start" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeAdult">Last name</label>
+                            <input type="text" class="input-sm form-control ln" name="start" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeAdult">User ID</label>
+                            <input type="text" class="input-sm form-control ui" name="start" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeAdult">Room ID</label>
+                            <input type="text" class="input-sm form-control ri" name="start" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeAdult">Room type</label>
+                            <input type="text" class="input-sm form-control rt" name="start" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-4 col-lg-4">
+                        <div class="form-group">
+                            <label for="typeAdult">Room price</label>
+                            <input type="text" class="input-sm form-control rp" name="start" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="typeAdult">Start date</label>
+                            <input type="text" class="input-sm form-control sd" name="start" />
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <div class="form-group">
+                            <label for="typeAdult">End date</label>
+                            <input type="text" class="input-sm form-control ed" name="start" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <button id="makeReservation" class="btn btn-md btn-primary btn-block">Make reservation</button>
         </div>
 
     </div>

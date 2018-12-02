@@ -87,3 +87,7 @@ th, td {
 .removeRoom {
     cursor: pointer
 }
+
+.glyphicon-remove {
+    cursor: pointer
+}
